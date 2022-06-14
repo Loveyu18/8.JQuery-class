@@ -4,20 +4,19 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>has</title>
     </head>
     <body>
-        <h1>Hello</h1>
-        <h1>Hello</h1>
+        <div class="a1-parent">
+            <div class="a1">A1</div>
+        </div>
+        <div class="a2-parent">
+            <div class="a2">A2</div>
+        </div>
 
         <script src="./js/jquery-3.6.0.min.js"></script>
         <script>
-            // const h1 = document.querySelectorAll("h1");
-            // console.log("hi", h1);
-            // h1.forEach((element) => {
-            //     element.style.color = "red";
-            // });
-            $("h1").css("color", "red");
+            $("div").has(".a1").css("background", "red");
         </script>
     </body>
 </html>

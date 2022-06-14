@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>attr</title>
+    </head>
+
+    <body>
+        <img src="./imgs/tumblr_owlk9fPw6z1tq0swwo1_500.png" alt="">
+
+
+        <script src="./js/jquery-3.6.0.js"></script>
+
+        <script>
+            // console.log("src:", $(img).attr("src"));
+
+            // $("img").attr("src", "./imgs/tumblr_owlk9fPw6z1tq0swwo1_500.png");
+            $("img").click(function () {
+                console.log("hi img", $(this));
+                $("img").attr("src","./imgs/tumblr_owlk9fPw6z1tq0swwo3_500.png")
+            })
+        </script>
+
+    </body>
+
+</html>

@@ -7,17 +7,18 @@
         <title>Document</title>
     </head>
     <body>
-        <h1>Hello</h1>
-        <h1>Hello</h1>
+        <div>
+            <input type="checkbox" name="alex" />
+            <span>Alex</span>
+        </div>
+        <div>
+            <input type="checkbox" name="bill" checked />
+            <span>Bill</span>
+        </div>
 
         <script src="./js/jquery-3.6.0.min.js"></script>
         <script>
-            // const h1 = document.querySelectorAll("h1");
-            // console.log("hi", h1);
-            // h1.forEach((element) => {
-            //     element.style.color = "red";
-            // });
-            $("h1").css("color", "red");
+            $("input:not(:checked) + span").css("background", "yellow");
         </script>
     </body>
 </html>
