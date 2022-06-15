@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mouseEvent</title>
+
+        <style>
+            .box {
+                width: 200px;
+                height: 200px;
+                background-color: rgb(98, 27, 27);
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="box"></div>
+
+        <script src="./js/jquery-3.6.0.js"></script>
+        <script>
+            $(".box").click(function () {
+                console.log("box click.");
+            })
+            $(".box").dblclick(function () {
+                console.log("dbl click.");
+            })
+            $(".box").contextmenu(function () {
+                console.log("contextmenu click.");
+            })
+            $(".box").mousedown(function () {
+                console.log("mousedown click.");
+            })
+            $(".box").mouseup(function () {
+                console.log("mouseup click.");
+            })
+            // 高階函式 high order function
+            $(".box").mouseenter(function () {
+                console.log("mouseenter click.");
+            })
+            $(".box").mouseleave(function () {
+                console.log("mouseleave click.");
+            })
+            $(".box").hover(
+                function () {
+                    console.log("box hover.");
+                },
+                function () {
+                    //偵測滑出
+                }
+            );
+            // 
+        </script>
+
+    </body>
+
+</html>
