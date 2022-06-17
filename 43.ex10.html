@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex10</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+            integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+            crossorigin="anonymous" />
+        <style>
+            .fontS {
+                font-size: 0.8rem;
+            }
+
+            .fontM {
+                font-size: 1rem;
+            }
+
+            .fontL {
+                font-size: 1.2rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="d-flex justify-content-end">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <!-- 在 class 裡面加 active 就可以點擊變色 -->
+                    <button type="button" class="btn btn-secondary">S</button>
+                    <button type="button" class="btn btn-secondary">M</button>
+                    <button type="button" class="btn btn-secondary">L</button>
+                </div>
+            </div>
+
+            <h2>JQery</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus repudiandae amet quibusdam iste
+                facere
+                nemo eius minus itaque reprehenderit, modi quasi nobis, voluptatem dolorum quos. Corporis nostrum
+                tempora
+                quaerat alias!
+                Repudiandae non assumenda deserunt impedit amet, quod repellendus. Sapiente quis doloribus iure nulla
+                atque
+                in aspernatur eligendi asperiores vero aliquid laborum, veniam quaerat eius minus sit sed dolor
+                perspiciatis
+                libero?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus repudiandae amet quibusdam iste
+                facere
+                nemo eius minus itaque reprehenderit, modi quasi nobis, voluptatem dolorum quos. Corporis nostrum
+                tempora
+                quaerat alias!
+                Repudiandae non assumenda deserunt impedit amet, quod repellendus. Sapiente quis doloribus iure nulla
+                atque
+                in aspernatur eligendi asperiores vero aliquid laborum, veniam quaerat eius minus sit sed dolor
+                perspiciatis
+                libero?</p>
+        </div>
+        <script src="./js/jquery-3.6.0.js"></script>
+        <script>
+
+
+
+
+
+            $(".btn").click(function () {
+                // console.log("this", $(this).is(":contains('S')"));
+                $(this).addClass("active").siblings().removeClass("active"); // 可以一起處理的寫外面就好
+                if ($(this).is(":contains('S')")) {
+                    $("p").removeClass().addClass("fontS");
+                }
+                if ($(this).is(":contains('M')")) {
+                    $("p").removeClass().addClass("fontM");
+                }
+                if ($(this).is(":contains('L')")) {
+                    $("p").removeClass().addClass("fontL");
+                }
+            });
+        </script>
+    </body>
+
+</html>
